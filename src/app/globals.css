@@ -92,3 +92,40 @@ body {
     animation: growth 3s forwards;
   }
 }
+
+#tech-stach {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 110%;
+    top: 50%;
+    content: "";
+    width: 80px;
+    height: 1px;
+    border-radius: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(39, 46, 62, 1) 0%,
+      rgba(234, 244, 254, 1) 31%,
+      rgba(184, 216, 252, 1) 84%,
+      rgba(39, 46, 62, 1) 100%
+    );
+  }
+  &::after {
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    content: "";
+    width: 80px;
+    height: 1px;
+    border-radius: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(39, 46, 62, 1) 0%,
+      rgba(234, 244, 254, 1) 31%,
+      rgba(184, 216, 252, 1) 84%,
+      rgba(39, 46, 62, 1) 100%
+    );
+  }
+}
