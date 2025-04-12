@@ -16,21 +16,42 @@
   --font-modern-warfare: var(--font-modern-warfare);
   --font-moonstrike: var(--font-moonstrike);
   --font-tristan-demo-regular: var(--font-tristan-demo-regular);
+
+  --animate-growth: growth 3s forwards;
+  @keyframes growth {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 80px;
+    }
+  }
+
+  --animate-growthColor: growthColor 8s cubic-bezier(0.15, 0.9, 0.7, -0.15)
+    infinite;
+  @keyframes growthColor {
+    0% {
+      color: var(--color-max-blue-700);
+    }
+    20% {
+      color: var(--color-max-blue-500);
+    }
+    40% {
+      color: var(--color-max-blue-200);
+    }
+    60% {
+      color: var(--color-max-blue-500);
+    }
+    100% {
+      color: var(--color-max-blue-700);
+    }
+  }
 }
 
 body {
   background: var(--color-max-blue-900);
   color: var(--color-max-blue-200);
   font-family: var(--font-funnel-sans), Arial, Helvetica, sans-serif;
-}
-
-@keyframes growth {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 80px;
-  }
 }
 
 #welcome {
