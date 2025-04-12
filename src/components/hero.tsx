@@ -4,10 +4,8 @@ import IconLinkedin from "./svg/icon-linkedin";
 
 export function Hero() {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
-      <div id="welcome" className="">
-        Opá, bem-vindo!
-      </div>
+    <section className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+      <div id="welcome">Hi, I&apos;m</div>
 
       <div className="pt-12">
         <h1
@@ -25,6 +23,6 @@ export function Hero() {
         <IconLinkedin />
         <IconGmail />
       </div>
-    </div>
+    </section>
   );
 }
