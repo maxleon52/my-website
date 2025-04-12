@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-max-blue-900: #060913;
+  --color-max-blue-700: #181e30;
+  --color-max-blue-500: #272e3e;
+  --color-max-blue-200: #abd1fc;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-science-personal-use-only: var(--font-science-personal-use-only);
+  --font-funnel-sans: var(--font-funnel-sans);
+
+  --font-andromeda: var(--font-andromeda);
+  --font-aquire: var(--font-aquire);
+  --font-fastrace: var(--font-fastrace);
+  --font-library3am: var(--font-library3am);
+  --font-modern-warfare: var(--font-modern-warfare);
+  --font-moonstrike: var(--font-moonstrike);
+  --font-tristan-demo-regular: var(--font-tristan-demo-regular);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-max-blue-900);
+  color: var(--color-max-blue-200);
+  font-family: var(--font-funnel-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes growth {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+#welcome {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 110%;
+    top: 50%;
+    content: "";
+    width: 0px;
+    height: 1px;
+    border-radius: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(39, 46, 62, 1) 0%,
+      rgba(234, 244, 254, 1) 31%,
+      rgba(184, 216, 252, 1) 84%,
+      rgba(39, 46, 62, 1) 100%
+    );
+    animation: growth 3s forwards;
+  }
+  &::after {
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    content: "";
+    width: 80px;
+    height: 1px;
+    border-radius: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(39, 46, 62, 1) 0%,
+      rgba(234, 244, 254, 1) 31%,
+      rgba(184, 216, 252, 1) 84%,
+      rgba(39, 46, 62, 1) 100%
+    );
+    animation: growth 3s forwards;
+  }
 }
