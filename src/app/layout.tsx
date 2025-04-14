@@ -3,37 +3,9 @@ import { Funnel_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const andromeda = localFont({
-  src: "./fonts/Andromeda-eR2n.ttf",
-  variable: "--font-andromeda",
-});
-const aquire = localFont({
-  src: "./fonts/Aquire-BW0ox.otf",
-  variable: "--font-aquire",
-});
-const fastrace = localFont({
-  src: "./fonts/Fastrace-YzXKj.ttf",
-  variable: "--font-fastrace",
-});
-const library3am = localFont({
-  src: "./fonts/Library3am-5V3Z.otf",
-  variable: "--font-library3am",
-});
-const modernWarfare = localFont({
-  src: "./fonts/ModernWarfare-OV7KP.ttf",
-  variable: "--font-modern-warfare",
-});
-const moonstrike = localFont({
-  src: "./fonts/Moonstrike-nRqzP.otf",
-  variable: "--font-moonstrike",
-});
 const sciencePersonalUseOnly = localFont({
   src: "./fonts/SciencePersonalUseOnly-JpG37.otf",
   variable: "--font-science-personal-use-only",
-});
-const tristanDemoRegular = localFont({
-  src: "./fonts/TristanDemoRegular-PKBWx.ttf",
-  variable: "--font-tristan-demo-regular",
 });
 
 const funnelSans = Funnel_Sans({
@@ -54,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelSans.variable} ${andromeda.variable} ${aquire.variable} ${fastrace.variable} ${library3am.variable} ${modernWarfare.variable} ${moonstrike.variable} ${sciencePersonalUseOnly.variable} ${tristanDemoRegular.variable} antialiased`}
+        className={`${funnelSans.variable} ${sciencePersonalUseOnly.variable} antialiased`}
       >
         {children}
       </body>

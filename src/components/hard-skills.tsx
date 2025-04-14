@@ -30,9 +30,11 @@ export default function HardSkills() {
   const stack = [
     { name: "React", icon: <SiReact size={24} /> },
     { name: "Next.js", icon: <RiNextjsFill size={24} /> },
-    { name: "TypeScript", icon: <SiTypescript size={24} /> },
+    { name: "Vite.js", icon: <SiVite size={24} /> },
     { name: "JavaScript", icon: <SiJavascript size={24} /> },
+    { name: "TypeScript", icon: <SiTypescript size={24} /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss size={24} /> },
+    { name: "Shadcn UI", icon: <SiShadcnui size={24} /> },
     { name: "Material UI", icon: <SiMui size={24} /> },
     { name: "Styled Components", icon: <SiStyledcomponents size={24} /> },
     {
@@ -66,8 +68,6 @@ export default function HardSkills() {
     { name: "GitLab", icon: <SiGitlab size={24} /> },
     { name: "HTML5", icon: <SiHtml5 size={24} /> },
     { name: "CSS3", icon: <SiCss3 size={24} /> },
-    { name: "Vite.js", icon: <SiVite size={24} /> },
-    { name: "Shadcn UI", icon: <SiShadcnui size={24} /> },
   ];
 
   return (
@@ -79,7 +79,6 @@ export default function HardSkills() {
           <div
             key={index}
             className="group bg-max-blue-700 flex size-16 flex-col items-center justify-center rounded-sm transition-all hover:scale-200"
-            title={item.name}
           >
             {item.icon}
             <span className="-mb-2.5 text-center text-[6px] opacity-0 group-hover:mb-0 group-hover:text-[8px] group-hover:opacity-100">
