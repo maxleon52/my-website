@@ -14,31 +14,34 @@ export function About() {
           </p> */}
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-2">
-          <div
+        <div
+          id="four-stack"
+          className="grid w-full grid-cols-2 gap-2 transition-all"
+        >
+          <li
             id="main-js"
-            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm"
+            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm transition-all duration-700"
           >
             JS
-          </div>
-          <div
+          </li>
+          <li
             id="main-ts"
-            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm"
+            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm transition-all duration-700"
           >
             TS
-          </div>
-          <div
+          </li>
+          <li
             id="main-next"
-            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm"
+            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm transition-all duration-700"
           >
-            N
-          </div>
-          <div
+            NextJS
+          </li>
+          <li
             id="main-react"
-            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm"
+            className="bg-max-blue-700 font-science-personal-use-only flex h-28 items-center justify-center rounded-sm transition-all duration-700"
           >
-            R
-          </div>
+            React
+          </li>
         </div>
       </div>
     </section>

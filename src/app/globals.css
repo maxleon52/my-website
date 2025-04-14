@@ -93,6 +93,16 @@ body {
   }
 }
 
+#four-stack:has(li:hover) {
+  li:hover {
+    box-shadow: 0 0 20px var(--color-max-blue-200);
+  }
+
+  li:not(:hover) {
+    filter: blur(2px);
+  }
+}
+
 #tech-stach {
   position: relative;
 
