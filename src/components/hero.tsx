@@ -5,7 +5,9 @@ import IconLinkedin from "./svg/icon-linkedin";
 export function Hero() {
   return (
     <section className="flex h-screen w-full flex-col items-center justify-center space-y-4">
-      <div id="welcome">Hi, I&apos;m</div>
+      <div className="lines-before-after before:animate-growth after:animate-growth !w-fit px-2">
+        Hi, I&apos;m
+      </div>
 
       <div className="pt-12">
         <h1
