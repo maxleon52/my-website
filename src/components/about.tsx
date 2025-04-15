@@ -8,10 +8,6 @@ export function About() {
           <p className="text-5xl">
             Brazilian developer. Profissional in translate prototype to code.
           </p>
-          {/* <p className="text-5xl">
-            Brazilian developer, with 6+ years of experience. Focused 100% on
-            web applications using React, Next.js and Javascript/TypeScript.
-          </p> */}
         </div>
 
         <div
