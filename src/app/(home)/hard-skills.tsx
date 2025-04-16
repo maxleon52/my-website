@@ -1,3 +1,6 @@
+import SvgBgLinesCircles from "@/components/svg/bg-lines-circles";
+import IconHighcharts from "@/components/svg/icon-highcharts";
+import IconNextauth from "@/components/svg/icon-nextauth";
 import { BiLogoAws } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 import {
@@ -23,11 +26,8 @@ import {
   SiVite,
 } from "react-icons/si";
 import { TbApi, TbPackages } from "react-icons/tb";
-import SvgBgLinesCircles from "./svg/bg-lines-circles";
-import IconHighcharts from "./svg/icon-highcharts";
-import IconNextauth from "./svg/icon-nextauth";
 
-export default function HardSkills() {
+export function HardSkills() {
   const stack = [
     { name: "React", icon: <SiReact size={24} /> },
     { name: "Next.js", icon: <RiNextjsFill size={24} /> },
@@ -72,7 +72,7 @@ export default function HardSkills() {
   ];
 
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-20 border py-16">
+    <section className="flex w-full flex-col items-center justify-center gap-20 py-16">
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="lines-before-after before:animate-growth after:animate-growth !w-fit px-2">
           TECH STACK

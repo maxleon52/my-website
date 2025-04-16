@@ -135,45 +135,6 @@ body {
   font-family: var(--font-funnel-sans), Arial, Helvetica, sans-serif;
 }
 
-/* #welcome {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    right: 110%;
-    top: 50%;
-    content: "";
-    width: 0px;
-    height: 1px;
-    border-radius: 100%;
-    background: linear-gradient(
-      90deg,
-      rgba(39, 46, 62, 1) 0%,
-      rgba(234, 244, 254, 1) 31%,
-      rgba(184, 216, 252, 1) 84%,
-      rgba(39, 46, 62, 1) 100%
-    );
-    animation: growth 3s forwards;
-  }
-  &::after {
-    position: absolute;
-    left: 110%;
-    top: 50%;
-    content: "";
-    width: 80px;
-    height: 1px;
-    border-radius: 100%;
-    background: linear-gradient(
-      90deg,
-      rgba(39, 46, 62, 1) 0%,
-      rgba(234, 244, 254, 1) 31%,
-      rgba(184, 216, 252, 1) 84%,
-      rgba(39, 46, 62, 1) 100%
-    );
-    animation: growth 3s forwards;
-  }
-} */
-
 #four-stack:has(li:hover) {
   li:hover {
     box-shadow: 0 0 20px var(--color-max-blue-200);

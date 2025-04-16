@@ -1,6 +1,6 @@
-import IconGithub from "./svg/icon-github";
-import IconGmail from "./svg/icon-gmail";
-import IconLinkedin from "./svg/icon-linkedin";
+import IconGithub from "@/components/svg/icon-github";
+import IconGmail from "@/components/svg/icon-gmail";
+import IconLinkedin from "@/components/svg/icon-linkedin";
 
 export function Hero() {
   return (
@@ -10,10 +10,7 @@ export function Hero() {
       </div>
 
       <div className="pt-12">
-        <h1
-          id="my-name"
-          className="animate-growthColor font-science-personal-use-only from-max-blue-700 to-max-blue-500 hover:!text-max-blue-200 bg-gradient-to-br bg-clip-text text-9xl text-transparent"
-        >
+        <h1 className="animate-growth-color font-science-personal-use-only from-max-blue-700 to-max-blue-500 hover:!text-max-blue-200 bg-gradient-to-br bg-clip-text text-9xl text-transparent">
           Maxwell
         </h1>
       </div>
