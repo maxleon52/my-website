@@ -29,7 +29,6 @@ export const metadata = {
     "batim",
   ],
   authors: [{ name: "Maxwell Alves", url: "https://www.batim.com.br" }],
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Maxwell Alves- Portfolio",
     description:
@@ -55,6 +54,11 @@ export const metadata = {
     images: ["https://www.mywebsite.com/hero.png"],
   },
 };
+
+export const generateViewport = () => ({
+  width: "device-width",
+  initialScale: 1.0,
+});
 
 export default function RootLayout({
   children,
