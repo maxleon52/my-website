@@ -73,7 +73,10 @@ export function HardSkills() {
   ];
 
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-20 py-16">
+    <section
+      id="hard-skills"
+      className="flex w-full flex-col items-center justify-center gap-20 py-16"
+    >
       <div className="flex flex-col items-center justify-center gap-8">
         <TitleSection>TECH STACK</TitleSection>
 

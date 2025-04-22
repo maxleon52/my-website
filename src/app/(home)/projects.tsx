@@ -2,7 +2,10 @@ import { TitleSection } from "@/components/title-section";
 
 export function Projects() {
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-8 pb-16">
+    <section
+      id="projects"
+      className="flex w-full flex-col items-center justify-center gap-8 pb-16"
+    >
       <TitleSection>PROJECTS</TitleSection>
 
       <div className="text-max-blue-200 flex w-full items-start justify-center gap-2 text-sm">

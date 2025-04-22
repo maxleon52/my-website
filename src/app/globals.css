@@ -130,6 +130,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-max-blue-900);
   color: var(--color-max-blue-200);
@@ -229,6 +233,12 @@ body {
     border-radius: 4px;
     animation: growth-width 1s ease-in-out 2.1s forwards;
   }
+}
+
+#hard-skills,
+#about,
+#projects {
+  scroll-margin-top: 8rem; /* Ajuste o valor conforme a altura do header */
 }
 
 @keyframes fade-color {

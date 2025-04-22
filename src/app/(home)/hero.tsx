@@ -5,7 +5,10 @@ import { TitleSection } from "@/components/title-section";
 
 export function Hero() {
   return (
-    <section className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+    <section
+      id="hero"
+      className="flex h-screen w-full flex-col items-center justify-center space-y-4"
+    >
       <TitleSection>Hi, I&apos;m</TitleSection>
 
       <div className="pt-12">

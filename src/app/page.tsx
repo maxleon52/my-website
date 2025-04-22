@@ -1,4 +1,5 @@
 import { About } from "./(home)/about";
+import { Contact } from "./(home)/contact";
 import { HardSkills } from "./(home)/hard-skills";
 import { Hero } from "./(home)/hero";
 import { Projects } from "./(home)/projects";
@@ -11,6 +12,7 @@ export default function Home() {
         <About />
         <HardSkills />
         <Projects />
+        <Contact />
       </div>
     </div>
   );
