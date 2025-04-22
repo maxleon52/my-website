@@ -5,6 +5,7 @@
   --color-max-blue-700: #181e30;
   --color-max-blue-500: #272e3e;
   --color-max-blue-200: #abd1fc;
+  --color-max-yellow-200: #f3ac5c;
 
   --font-science-personal-use-only: var(--font-science-personal-use-only);
   --font-funnel-sans: var(--font-funnel-sans);
@@ -190,7 +191,7 @@ body {
   border-top: 1px solid var(--color-max-blue-700);
   border-bottom: 1px solid var(--color-max-blue-700);
   /* border: 1px solid var(--color-max-blue-700); */
-  background: var(--color-max-blue-900);
+  /* background: var(--color-max-blue-900); */
   animation: fade-color 1s ease-in-out 1.9s forwards;
 
   /* &::before { */
@@ -203,6 +204,7 @@ body {
     content: "";
     width: calc(100% + 2px);
     height: calc(100% + 2px);
+    background: var(--color-max-blue-900);
     z-index: 10;
     border-left: 2px solid var(--color-max-blue-900);
     border-right: 2px solid var(--color-max-blue-900);

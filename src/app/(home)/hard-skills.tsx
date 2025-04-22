@@ -81,7 +81,7 @@ export function HardSkills() {
           {stack.map((item, index) => (
             <div
               key={index}
-              className="group bg-max-blue-700 flex size-16 flex-col items-center justify-center rounded-sm transition-all hover:scale-200"
+              className="group bg-max-blue-700 hover:text-max-yellow-200 flex size-16 flex-col items-center justify-center rounded-sm transition-all hover:scale-200"
             >
               {item.icon}
               <span className="-mb-2.5 text-center text-[6px] opacity-0 group-hover:mb-0 group-hover:text-[8px] group-hover:opacity-100">
@@ -99,28 +99,28 @@ export function HardSkills() {
 
       <div className="relative grid h-[500px] w-full max-w-1/2 grid-cols-2 content-between items-center justify-items-center">
         <div className="animate-slide-right flex w-fit max-w-3/4 flex-col gap-3 overflow-hidden px-4 text-center opacity-0">
-          <strong className="font-science-personal-use-only text-2xl">
+          <strong className="font-science-personal-use-only text-max-yellow-200 text-2xl">
             FRONT-END
           </strong>
           <p>HTML / CSS / JS / TS / REACT / NEXTJS ZUSTAND / REDUX</p>
         </div>
 
         <div className="animate-slide-left flex w-fit max-w-3/4 flex-col gap-3 overflow-hidden px-4 text-center opacity-0">
-          <strong className="font-science-personal-use-only text-2xl">
+          <strong className="font-science-personal-use-only text-max-yellow-200 text-2xl">
             UI LIBRARY
           </strong>
           <p>SHADNCN-UI / MATERIAL UI / TAILWIND CSS / STYLED-COMPONENTS</p>
         </div>
 
         <div className="animate-slide-right flex w-fit max-w-3/4 flex-col gap-3 overflow-hidden px-4 text-center opacity-0">
-          <strong className="font-science-personal-use-only text-2xl">
+          <strong className="font-science-personal-use-only text-max-yellow-200 text-2xl">
             OTHER
           </strong>
           <p>JEST / REACT TESTING LIBRARY / NODE.JS / PRISMA / MONGODB</p>
         </div>
 
         <div className="animate-slide-left flex w-fit max-w-3/4 flex-col gap-3 overflow-hidden px-4 text-center opacity-0">
-          <strong className="font-science-personal-use-only text-2xl">
+          <strong className="font-science-personal-use-only text-max-yellow-200 text-2xl">
             TOOLS
           </strong>
           <p>GIT / WEBPACK / VITE / FIGMA / JIRA</p>
