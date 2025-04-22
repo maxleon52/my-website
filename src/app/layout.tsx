@@ -9,8 +9,9 @@ const sciencePersonalUseOnly = localFont({
 });
 
 const funnelSans = Funnel_Sans({
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-funnel-sans",
+  subsets: ["latin"],
 });
 
 export const metadata = {
