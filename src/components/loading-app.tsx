@@ -3,7 +3,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef, useState } from "react";
-import IconHeader from "./svg/icon-header";
 
 gsap.registerPlugin(useGSAP);
 
@@ -18,7 +17,7 @@ export function LoadingApp() {
         onComplete: () => {
           gsap.to(container.current, {
             width: "0%",
-            duration: 1,
+            // duration: 1,
             ease: "Expo.easeInOut",
             onComplete: () => {
               document.body.style.overflow = ""; // Restaura o scroll na pagina
@@ -39,7 +38,6 @@ export function LoadingApp() {
             strokeDasharray: "120 1",
             duration: 2,
           },
-          0,
         ).fromTo(
           "#icon-header-fill",
           {
@@ -49,7 +47,6 @@ export function LoadingApp() {
             fill: "#ABD1FC",
             duration: 1,
           },
-          1,
         );
       };
 
@@ -76,9 +73,28 @@ export function LoadingApp() {
   return isVisible ? (
     <div
       ref={container}
-      className="bg-max-blue-500 fixed !top-0 !right-0 !bottom-0 !left-0 z-999 flex h-screen w-full items-center justify-center"
+      className="bg-max-blue-700 fixed !top-0 !right-0 !bottom-0 !left-0 z-999 flex h-screen w-full items-center justify-center"
     >
-      <IconHeader />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="29"
+        fill="none"
+        viewBox="0 0 34 29"
+      >
+        <g opacity="0.5">
+          <path
+            id="icon-header-fill"
+            fill="#ABD1FC"
+            d="M12.5 28H9L1 14 9 1h9l-8 13 5.5 9zM24 1h-3l-3 4 5 9-8 14h9l8.5-14z"
+          ></path>
+          <path
+            id="icon-header-stroke"
+            stroke="#ABD1FC"
+            d="M12.5 28H9L1 14 9 1h9l-8 13 5.5 9zM24 1h-3l-3 4 5 9-8 14h9l8.5-14z"
+          ></path>
+        </g>
+      </svg>
     </div>
   ) : null;
 }
