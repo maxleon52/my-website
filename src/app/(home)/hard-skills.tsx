@@ -39,6 +39,8 @@ gsap.registerPlugin(useGSAP);
 
 export function HardSkills() {
   const container = useRef(null);
+  const containerStack = useRef(null);
+
   const [showAnimation, setShowAnimation] = useState(false);
 
   const stack = [
@@ -84,39 +86,76 @@ export function HardSkills() {
     { name: "CSS3", icon: <SiCss3 size={24} /> },
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const itemsRefs = useRef<any[]>([]);
+  // const itemsRefs = useRef<any[]>(Array({ length: 28 }).fill(null));
+
+  useGSAP(() => {
+    // const tl = gsap.timeline();
+
+    gsap.from("#tech-stack-title", {
+      display: "none",
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".trigger-tech-stack-title",
+        start: "top 70%",
+        end: "bottom 70%",
+      },
+    });
+
+    gsap.from("#tech-stack-h3-title", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#tech-stack-h3-title",
+        start: "top center",
+        end: "top center",
+        onEnter: () => {
+          setShowAnimation(true);
+        },
+      },
+    });
+
+    gsap.to("#tech-stack-div-4-stack", {
+      scrollTrigger: {
+        trigger: "#tech-stack-h3-title",
+        start: "top center",
+        end: "bottom center",
+      },
+    });
+  });
+
   useGSAP(
     () => {
-      gsap.from(".tech-stack-title", {
-        display: "none",
-        opacity: 0,
+      gsap.to(itemsRefs.current, {
+        opacity: 1,
+        stagger: {
+          each: 0.1,
+        },
         scrollTrigger: {
-          trigger: ".trigger-tech-stack-title",
-          start: "top bottom",
-          end: "bottom bottom",
+          trigger: containerStack.current,
+          start: "top 70%",
+          end: "bottom 70%",
         },
       });
 
-      gsap.from("#tech-stack-h3-title", {
-        opacity: 0,
-        scrollTrigger: {
-          trigger: "#tech-stack-h3-title",
-          start: "top center",
-          end: "top center",
-          onEnter: () => {
-            setShowAnimation(true);
-          },
-        },
-      });
-
-      gsap.to("#tech-stack-div-4-stack", {
-        scrollTrigger: {
-          trigger: "#tech-stack-h3-title",
-          start: "top center",
-          end: "bottom center",
-        },
-      });
+      // OU;
+      // itemsRefs.current.forEach((item, index) => {
+      //   gsap.from(item, {
+      //     opacity: 0,
+      //     duration: 0.6, // Ajuste a duração conforme necessário
+      //     delay: index * 0.2, // Simula o stagger com um atraso calculado
+      //     scrollTrigger: {
+      //       trigger: ".trigger-tech-stack-title",
+      //       start: "top 70%",
+      //       end: "bottom 70%",
+      //       markers: true,
+      //     },
+      //   });
+      // });
     },
-    { scope: container },
+    {
+      scope: containerStack,
+    },
   );
 
   return (
@@ -127,14 +166,22 @@ export function HardSkills() {
     >
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="h-6 w-[110px]">
-          <TitleSection className="tech-stack-title">TECH STACK</TitleSection>
+          <TitleSection id="tech-stack-title" className="">
+            TECH STACK
+          </TitleSection>
         </div>
 
-        <div className="trigger-tech-stack-title grid grid-cols-7 gap-4">
+        <div
+          ref={containerStack}
+          className="trigger-tech-stack-title grid grid-cols-7 gap-4"
+        >
           {stack.map((item, index) => (
             <div
               key={index}
-              className="group bg-max-blue-700 hover:text-max-yellow-200 flex size-16 flex-col items-center justify-center rounded-sm transition-all hover:scale-200"
+              ref={(el) => {
+                itemsRefs.current[index] = el;
+              }}
+              className="group bg-max-blue-700 hover:text-max-yellow-200 flex size-16 flex-col items-center justify-center rounded-sm opacity-0 transition-all hover:scale-200"
             >
               {item.icon}
               <span className="-mb-2.5 text-center text-[6px] opacity-0 group-hover:mb-0 group-hover:text-[8px] group-hover:opacity-100">

@@ -20,7 +20,6 @@ export function About() {
           trigger: container.current,
           start: "top center",
           end: "50% center",
-          markers: true,
         },
       });
     },
