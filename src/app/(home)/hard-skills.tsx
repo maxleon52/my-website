@@ -1,7 +1,13 @@
+"use client";
+
 import SvgBgLinesCircles from "@/components/svg/bg-lines-circles";
 import IconHighcharts from "@/components/svg/icon-highcharts";
 import IconNextauth from "@/components/svg/icon-nextauth";
 import { TitleSection } from "@/components/title-section";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import { BiLogoAws } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 import {
@@ -28,7 +34,12 @@ import {
 } from "react-icons/si";
 import { TbApi, TbPackages } from "react-icons/tb";
 
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
+
 export function HardSkills() {
+  const container = useRef(null);
+
   const stack = [
     { name: "React", icon: <SiReact size={24} /> },
     { name: "Next.js", icon: <RiNextjsFill size={24} /> },
@@ -72,15 +83,36 @@ export function HardSkills() {
     { name: "CSS3", icon: <SiCss3 size={24} /> },
   ];
 
+  useGSAP(
+    () => {
+      gsap.from(".tech-stack-title", {
+        display: "none",
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".trigger-tech-stack-title",
+          start: "top bottom",
+          end: "bottom bottom",
+          markers: true,
+        },
+      });
+    },
+    { scope: container },
+  );
+
   return (
     <section
       id="hard-skills"
       className="flex w-full flex-col items-center justify-center gap-20 py-16"
     >
-      <div className="flex flex-col items-center justify-center gap-8">
-        <TitleSection>TECH STACK</TitleSection>
+      <div
+        ref={container}
+        className="flex flex-col items-center justify-center gap-8"
+      >
+        <div className="h-6 w-[110px]">
+          <TitleSection className="tech-stack-title">TECH STACK</TitleSection>
+        </div>
 
-        <div className="grid grid-cols-7 gap-4">
+        <div className="trigger-tech-stack-title grid grid-cols-7 gap-4">
           {stack.map((item, index) => (
             <div
               key={index}
