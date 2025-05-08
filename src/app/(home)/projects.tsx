@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { TitleSection } from "@/components/title-section";
+import { projects } from "@/constants/projects";
 import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -52,7 +54,7 @@ export function Projects() {
         id="container-cards-projects"
         className="text-max-blue-200 flex w-full items-start justify-center gap-2 text-sm"
       >
-        {[1, 2, 3, 4].map((_, index) => (
+        {projects.map((item, index) => (
           <div
             key={index}
             className={cn(
@@ -60,13 +62,27 @@ export function Projects() {
               showAnimation && "card-project",
             )}
           >
-            <div className="bg-max-blue-700 absolute top-2 left-2 z-10 h-0 w-[calc(100%_-_16px)] transition-all duration-500 ease-in-out group-hover:h-4/6"></div>
+            <div className="bg-max-blue-700 absolute top-2 left-2 z-10 flex h-0 w-[calc(100%_-_16px)] items-center justify-center overflow-clip transition-all duration-500 ease-in-out group-hover:h-4/6">
+              <img
+                src={item.imageBg.src}
+                alt={item.imageBg.alt}
+                className="h-auto w-full object-fill"
+                // width={75}
+                // height={75}
+              />
+            </div>
             <div className="flex h-3/5 w-full items-center justify-center">
-              LOGO
+              <img
+                src={item.image.src}
+                alt={item.image.alt}
+                className="h-[100px] w-[100px] object-contain"
+                // width={75}
+                // height={75}
+              />
             </div>
             <div className="flex h-2/5 w-full flex-col items-center justify-center gap-2">
               <strong className="text-max-yellow-200 text-center">
-                Project Name
+                {item.name}
               </strong>
               <small>0{index + 1}</small>
             </div>

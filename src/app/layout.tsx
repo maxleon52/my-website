@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import { LoadingApp } from "@/components/loading-app";
 import { Funnel_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -70,9 +71,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${funnelSans.variable} ${sciencePersonalUseOnly.variable} antialiased`}
-        // style={{ overflow: "hidden" }} // Desabilita o scroll inicialmente
+        style={{ overflow: "hidden" }} // Desabilita o scroll inicialmente
       >
-        {/* <LoadingApp /> */}
+        <LoadingApp />
 
         <Header />
         <main>{children}</main>

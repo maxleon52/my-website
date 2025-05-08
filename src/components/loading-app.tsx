@@ -54,10 +54,10 @@ export function LoadingApp() {
         document.readyState === "complete" ||
         document.readyState === "interactive"
       ) {
-        console.log("document.readyState: ", document.readyState);
+        // console.log("document.readyState: ", document.readyState);
         runAnimation();
       } else {
-        console.log("ELSE");
+        // console.log("ELSE");
         document.addEventListener("DOMContentLoaded", runAnimation);
       }
 
