@@ -162,18 +162,16 @@ export function HardSkills() {
     <section
       ref={container}
       id="hard-skills"
-      className="flex w-full flex-col items-center justify-center gap-20 py-16"
+      className="flex w-full flex-col items-center justify-center gap-20 overflow-hidden p-4 sm:py-16"
     >
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="h-6 w-[110px]">
-          <TitleSection id="tech-stack-title" className="">
-            TECH STACK
-          </TitleSection>
+          <TitleSection id="tech-stack-title">TECH STACK</TitleSection>
         </div>
 
         <div
           ref={containerStack}
-          className="trigger-tech-stack-title grid grid-cols-7 gap-4"
+          className="trigger-tech-stack-title grid grid-cols-4 gap-4 sm:grid-cols-7"
         >
           {stack.map((item, index) => (
             <div
@@ -194,7 +192,7 @@ export function HardSkills() {
 
       <h3
         id="tech-stack-h3-title"
-        className="max-w-[800px] text-center text-5xl"
+        className="w-full text-center text-2xl sm:max-w-[800px] sm:text-5xl"
       >
         Transforming code into Intuitive, Responsive and Aesthetically Pleasing
         Digital Experience.
@@ -202,7 +200,7 @@ export function HardSkills() {
 
       <div
         id="tech-stack-div-4-stack"
-        className="relative grid h-[500px] w-full max-w-1/2 grid-cols-2 content-between items-center justify-items-center"
+        className="relative grid h-[500px] w-full content-between items-center justify-items-center sm:max-w-1/2 sm:grid-cols-2"
       >
         <div
           className={cn(

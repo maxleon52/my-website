@@ -5,11 +5,11 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex h-[500px] w-full flex-col items-center justify-center gap-8 overflow-hidden py-16"
+      className="relative flex h-[500px] w-full flex-col items-center justify-center gap-8 overflow-hidden px-4 sm:py-16"
     >
       <SvgBgShadowBlue />
       <p className="text-max-blue-200 max-w-2xl text-center text-5xl">
-        Let&apos;s connect, send me a email.
+        Let&apos;s connect, send me an email.
       </p>
       <p className="text-2xl">maxleon522@gmail.com</p>
       <TitleSection>

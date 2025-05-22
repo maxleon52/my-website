@@ -73,7 +73,7 @@ export function LoadingApp() {
   return isVisible ? (
     <div
       ref={container}
-      className="bg-max-blue-700 fixed !top-0 !right-0 !bottom-0 !left-0 z-999 flex h-screen w-full items-center justify-center"
+      className="bg-max-blue-700 fixed !top-0 !right-0 !bottom-0 !left-0 z-999 flex h-full w-full items-center justify-center"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

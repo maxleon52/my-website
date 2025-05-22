@@ -30,18 +30,18 @@ export function About() {
     <section
       ref={container}
       id="about"
-      className="flex w-full items-center justify-center gap-8 pb-16"
+      className="flex w-full items-center justify-center gap-8 overflow-hidden px-4 sm:overflow-visible sm:pb-16"
     >
       <div
         id="about-description-with-stack"
-        className="flex max-w-[1200px] gap-8"
+        className="flex max-w-[1200px] flex-col gap-8 sm:flex-row"
       >
         <div className="max-w-[650px]">
-          <small className="font-science-personal-use-only text-max-yellow-200">
+          <small className="font-science-personal-use-only text-max-yellow-200 text-2xl sm:text-base">
             I&apos;m
           </small>
 
-          <p className="text-5xl">
+          <p className="text-3xl sm:text-5xl">
             Brazilian developer. Profissional in translate prototype to code.
           </p>
         </div>

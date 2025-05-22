@@ -43,7 +43,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="flex w-full flex-col items-center justify-center gap-8 pb-16"
+      className="flex w-full flex-col items-center justify-center gap-8 overflow-hidden p-4 sm:pb-16"
     >
       <div className="h-6 w-[110px]">
         <TitleSection id="project-title" className="">
@@ -53,7 +53,7 @@ export function Projects() {
 
       <div
         id="container-cards-projects"
-        className="text-max-blue-200 flex w-full items-start justify-center gap-2 text-sm"
+        className="text-max-blue-200 flex w-full gap-2 overflow-x-auto text-sm sm:items-start sm:justify-center"
       >
         {projects.map((item, index) => (
           <Link
